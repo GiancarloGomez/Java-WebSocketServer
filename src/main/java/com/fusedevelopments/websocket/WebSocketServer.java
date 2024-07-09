@@ -14,7 +14,7 @@ import com.google.gson.JsonSyntaxException;
 import java.io.IOException;
 import java.util.Set;
 
-@ServerEndpoint("/ws")
+@ServerEndpoint("/")
 public class WebSocketServer {
 
     private static final NamespaceManager namespaceManager = new NamespaceManager();

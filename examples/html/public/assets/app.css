@@ -1,0 +1,13 @@
+.btn:focus-visible,
+.form-control:focus{
+    box-shadow: none;
+}
+.form-control:focus{
+    border-color: var(--bs-border-color);
+}
+section {
+    height: calc( 100vh - 3.5625rem ) ;
+    ul {
+        flex-grow: 1;
+    }
+}
