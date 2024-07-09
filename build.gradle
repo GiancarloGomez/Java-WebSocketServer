@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+group 'com.fusedevelopments'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'jakarta.websocket:jakarta.websocket-api:2.1.1'
+    implementation 'org.glassfish.tyrus:tyrus-server:2.1.5'
+    implementation 'org.glassfish.tyrus:tyrus-container-grizzly-server:2.1.5'
+    implementation 'com.google.code.gson:gson:2.11.0'
+}
+
+application {
+    mainClass = 'com.fusedevelopments.websocket.Main'
+}
+
+shadowJar {
+    mergeServiceFiles()
+    manifest {
+        attributes 'Main-Class': 'com.fusedevelopments.websocket.Main'
+    }
+}
